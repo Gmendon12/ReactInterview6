@@ -1,0 +1,27 @@
+[    {
+        "Name" : "Rakesh",
+        "Course" : "Full Stack Development",
+        "Age" : 24
+    },
+    {
+        "Name" : "Priyanka",
+        "Course" : "Full Stack Development",
+        "Age" : 20
+    },
+    {
+        "Name" : "Rahul",
+        "Course" : "Full Stack Development",
+        "Age" : 22
+    },
+    {
+        "Name" : "David",
+        "Course" : "Full Stack Development",
+        "Age" : 24
+    },
+    {
+        "Name" : "Nakul",
+        "Course" : "Full Stack Development",
+        "Age" : 24
+    }
+
+]

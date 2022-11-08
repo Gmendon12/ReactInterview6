@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <ol>
+    <li>
+        <strong>  Events in ReactJs</strong>
+
+        <p>
+            An Event is an action that can be triggered as a result of user action or a system generated event eg. a mouse click, mouse hover, loading of a webpage, pressing a key etc.
+            Event Handlers are responsible to make our app more user interactive. React consists of its own react handling systems  <br> <br>
+
+            
+            <ul>
+                *Difference between event handlers in JS and ReactJs <br>
+                <li>
+                    In React, we use the camelCase to name the events instead of lowercase
+                    e.g "button onClick={displayText()}"
+                </li>
+                <li>
+                    in React, we pass a function as an event and not a string, like in JS
+                </li>
+            </ul>
+        </p>
+    </li>
+
+    <li>
+         <strong>Memory Leak and how to overcome it</strong> 
+
+        <p>
+            Every React Component has a lifecycle and the three main phases are : Mounting , Updating and Unmounting.
+            In mounting phase, the component is created and inserted into the DOM. In the unmounting phase, the component is removed and destroeyd from the DOM. 
+             <br/> <br> Any subscriptions, timers, API calls that were created in the mounting phase, should be cancelled before the unmounting phase.
+            If we fail to do so , that subscription will be stored in the memory of the component and now we will have unimportant data in our app which is not accessible.
+             <br> <br> If this process is repreated multiple times, usefull memory will be filled up with inaccessible data leading to performance issues or crashing the system.
+
+             <ul>
+           <strong> How to overcome memory leaks</strong>
+                <li>
+                    in Function components , we can use the useEffect clean up function , which helps us clean up subscriptions and asynchronous tasks before the component unmounts.
+                </li>
+                <li>
+                    In Class components, we can directly use the lifecycle method ie. ComponentWillUnmount to cancel any subscriptions
+                </li>
+                <li>
+                    if we are fetching API calls, we can use AbortControllers. AbortController represents a controller object that will allow you to abort one or more web requests.
+                    for eg. we can cancel the API request when navigating to a new page
+                </li>
+             </ul>
+        </p>
+    </li>
+
+    <li>
+        <strong>Should you use Class or Functional Compoent ?</strong>
+
+        <p>
+            The actual answer to this is - personal choice. It is the choice of the developer which component is better as both of them have pros and cons.
+            But ideally the fucntional component is easier to understadn, more concise, leading to cleaner, less complex code.
+            <br>
+            <ul>
+                <li>
+                    Component Rendering - In class components, the render() method is used for rendering the JSX by extending React.Component. A functional component is plain JS function that returns a JSX. It is more simple to use as we do not need the render() function
+                </li>
+
+                <li>
+                    Hnadling Props - in Class Components, this.props is used to access our name props. in Functional component we take props as arguments and acess them directly in the return statement.
+                    in Functional Component we do not have to worry about the "this" keyword
+                </li>
+                <li>
+                    Hnadling State
+                </li>
+            </ul>
+        </p>
+    </li>
+    </ol>
+</body>
+</html>
